@@ -1,0 +1,10 @@
+{
+  "seed": 0,
+  "initial_state_sha256": "9270949fd1726801bcf8d24fbcbe6f3df298abf6e96e3a9210dca830115fb429",
+  "author_state_sha256": "34cac034ca79077fbf1c66f1fc388e7239df545c53f7541a1748a796da75ccb5",
+  "optimizer_state_loaded": false,
+  "input_fingerprints": {
+    "train_graph": "a6f81facf62f80350e3c83c6d04a194959c36b76bd7c564674157db8fae56659",
+    "test_graph": "3890c4c7a5d6efd0768804814da7944042229f9d55bc78c6d051ddc2ba07c1ef"
+  }
+}

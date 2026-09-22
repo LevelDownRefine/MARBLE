@@ -1,0 +1,62 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "animal": "achilles",
+  "model_parameters": {
+    "epochs": 100,
+    "order": 1,
+    "lr": 1,
+    "batch_size": 64,
+    "hidden_channels": [
+      64
+    ],
+    "out_channels": 32,
+    "inner_product_features": false,
+    "emb_norm": true,
+    "diffusion": false,
+    "include_positions": true,
+    "momentum": 0.9,
+    "frac_sampled_nb": -1,
+    "include_self": true,
+    "dropout": 0.0,
+    "vec_norm": false,
+    "bias": true,
+    "batch_norm": "batch_norm",
+    "seed": 0,
+    "dim_signal": 20,
+    "dim_emb": 20,
+    "n_sampled_nb": -1
+  },
+  "parameter_source": "public checkpoint hyperparameters; fresh weights from original constructor",
+  "split": "first 8000 bins train; final 2000 bins test; 7999/1999 anchors",
+  "preprocessing_seed": 0,
+  "pca_dimensions": 20,
+  "input_fingerprints": {
+    "train_graph": "a6f81facf62f80350e3c83c6d04a194959c36b76bd7c564674157db8fae56659",
+    "test_graph": "3890c4c7a5d6efd0768804814da7944042229f9d55bc78c6d051ddc2ba07c1ef"
+  },
+  "selection": "minimum validation contrastive loss inside the training graph",
+  "primary_evaluation": "frozen batch normalization (eval mode)",
+  "secondary_evaluation": "train-mode transform, as in author notebook",
+  "decoder": {
+    "neighbors": 36,
+    "metric": "cosine",
+    "target": "position"
+  },
+  "gpu_backend": "official PyTorch 2.14.0+cu130; native sparse multiplication",
+  "sampler": "original PyG 2.1 MARBLE NeighborSampler; all sampled IDs saved",
+  "equivalence": "K[:, sampled_ids] @ x[sampled_ids] = K @ (bincount(sampled_ids) * x), restricted to targets",
+  "caveats": [
+    "Single animal and one temporal split; seeds are not independent animals.",
+    "The author training notebook has whole-recording fitting branches.",
+    "Checkpoint lr=1 differs from notebook implicit default lr=0.01.",
+    "Author spike-bin time units/count handling retained for fidelity.",
+    "Test graph uses the entire test window; offline decoding only.",
+    "Original graph preprocessing/sampling on CPU; neural training on CUDA 13.",
+    "Sparse CUDA arithmetic need not be bitwise deterministic.",
+    "CEBRA is not retrained; pretrained values remain references only."
+  ]
+}

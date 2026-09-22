@@ -1,0 +1,15 @@
+{
+  "runtime": {
+    "torch": "2.14.0+cu130",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "capability": [
+      12,
+      0
+    ],
+    "input_sha256": "bbf1ecbe14e8a67068e47032008a75be084c76bec5071595eb6ddbc15e56874d",
+    "tf32": false,
+    "sparse_cuda_bitwise_determinism_guaranteed": false
+  },
+  "seconds": 145.2278346000021
+}

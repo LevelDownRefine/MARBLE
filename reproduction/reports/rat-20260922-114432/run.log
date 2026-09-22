@@ -1,0 +1,87 @@
+2026-09-22 11:44:47,999 Achilles neural=(10000, 120) labels=(10000, 3); train=(8000, 120) test=(2000, 120)
+2026-09-22 11:44:49,356 Decoded CEBRA-time
+2026-09-22 11:44:49,560 Decoded CEBRA-behaviour
+Converting spikes to rates... this may take a few minutes.
+
+---- Embedding dimension: 20
+---- Signal dimension: 20
+---- Computing kernels ...
+---- Computing spectrum with 1 eigenvectors...Converting spikes to rates... this may take a few minutes.
+
+---- Embedding dimension: 20
+---- Signal dimension: 20
+---- Computing kernels ...
+2026-09-22 11:45:01,298 MARBLE train=(7999, 20) test=(1999, 20); PCA solver=randomized
+<repo>\MARBLE\main.py:68: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.params = torch.load(loadpath, map_location=device)["params"]
+---- Computing spectrum with 1 eigenvectors...
+---- Settings:
+
+epochs : 100
+order : 1
+lr : 1
+batch_size : 64
+hidden_channels : [64]
+out_channels : 32
+inner_product_features : False
+emb_norm : True
+diffusion : False
+include_positions : True
+momentum : 0.9
+frac_sampled_nb : -1
+include_self : True
+dropout : 0.0
+vec_norm : False
+bias : True
+batch_norm : batch_norm
+seed : 0
+dim_signal : 20
+dim_emb : 20
+n_sampled_nb : -1
+
+---- Number of features to pass to the MLP:  440
+---- Total number of parameters:  30433
+
+Using device cpu
+<repo>\MARBLE\main.py:413: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(
+2026-09-22 11:45:03,682 Decoded MARBLE-notebook
+<repo>\MARBLE\main.py:68: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.params = torch.load(loadpath, map_location=device)["params"]
+
+---- Settings:
+
+epochs : 100
+order : 1
+lr : 1
+batch_size : 64
+hidden_channels : [64]
+out_channels : 32
+inner_product_features : False
+emb_norm : True
+diffusion : False
+include_positions : True
+momentum : 0.9
+frac_sampled_nb : -1
+include_self : True
+dropout : 0.0
+vec_norm : False
+bias : True
+batch_norm : batch_norm
+seed : 0
+dim_signal : 20
+dim_emb : 20
+n_sampled_nb : -1
+
+---- Number of features to pass to the MLP:  440
+---- Total number of parameters:  30433
+
+Using device cpu
+<repo>\MARBLE\main.py:413: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(
+2026-09-22 11:45:05,912 Decoded MARBLE-eval
+2026-09-22 11:45:08,008 CEBRA-time: MAE=0.176014 m R2=0.760060
+2026-09-22 11:45:08,008 CEBRA-behaviour: MAE=0.122013 m R2=0.838268
+2026-09-22 11:45:08,008 MARBLE-notebook: MAE=0.085685 m R2=0.881431
+2026-09-22 11:45:08,008 MARBLE-eval: MAE=0.090542 m R2=0.878411
+2026-09-22 11:45:08,008 Completed in 20.4 s: <repo>\reproduction\results\rat-20260922-114432

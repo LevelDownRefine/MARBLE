@@ -1,0 +1,22 @@
+{
+  "rat_data.pkl": {
+    "url": "https://dataverse.harvard.edu/api/access/datafile/7609512",
+    "bytes": 22055089,
+    "sha256": "29dffd951853a98615827e7b8f3507907f9e0f0ef67e875410778ab4aadd42ab"
+  },
+  "marble_achilles_32D.pth": {
+    "url": "https://dataverse.harvard.edu/api/access/datafile/7659512",
+    "bytes": 251915,
+    "sha256": "960e62bcbc275da79987331833ae5f1a5c4126b6d9c6b1e9e4e305406438a1ba"
+  },
+  "cebra_time_achilles_32D.pt": {
+    "url": "https://dataverse.harvard.edu/api/access/datafile/7609517",
+    "bytes": 584362,
+    "sha256": "45f35449f39c4b31ccf77fba60cfb06eae0dc4c4e87edd0427b6bf5786d212d0"
+  },
+  "cebra_behaviour_achilles_32D.pt": {
+    "url": "https://dataverse.harvard.edu/api/access/datafile/7609520",
+    "bytes": 584490,
+    "sha256": "8945ed9919a6d694adddc560d14143d44b86381a5f1aaf002cb7b0c27b51e879"
+  }
+}

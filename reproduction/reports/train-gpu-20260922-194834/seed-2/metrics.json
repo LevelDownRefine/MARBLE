@@ -1,0 +1,46 @@
+{
+  "seed": 2,
+  "scope": "Achilles; from-scratch MARBLE on CUDA 13",
+  "representation_training_performed": true,
+  "training_epochs": 100,
+  "primary_mode": "eval",
+  "results": {
+    "eval": {
+      "samples": 1999,
+      "mean_absolute_error_m": 0.08769631385803223,
+      "median_absolute_error_m": 0.05072975158691406,
+      "std_absolute_error_m": 0.1323768049478531,
+      "position_r2": 0.9094004127976445
+    },
+    "notebook": {
+      "samples": 1999,
+      "mean_absolute_error_m": 0.08515045791864395,
+      "median_absolute_error_m": 0.04524773359298706,
+      "std_absolute_error_m": 0.13361498713493347,
+      "position_r2": 0.9097988988172349
+    }
+  },
+  "initial_state_sha256": "f0b4d8037f50c2f790055b66519da106eab99d87d4aa475e0a747b7ccf32171a",
+  "trained_state_sha256": "cb64913b161751cc540cf8eac23018e23cbd20e9369599f1c4145ed9958d955c",
+  "input_fingerprints": {
+    "train_graph": "a6f81facf62f80350e3c83c6d04a194959c36b76bd7c564674157db8fae56659",
+    "test_graph": "3890c4c7a5d6efd0768804814da7944042229f9d55bc78c6d051ddc2ba07c1ef"
+  },
+  "original_code_embedding_max_abs_error": 4.3213367462158203e-07,
+  "runtime": {
+    "torch": "2.14.0+cu130",
+    "cuda": "13.0",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "capability": [
+      12,
+      0
+    ],
+    "input_sha256": "bbf1ecbe14e8a67068e47032008a75be084c76bec5071595eb6ddbc15e56874d",
+    "tf32": false,
+    "sparse_cuda_bitwise_determinism_guaranteed": false
+  },
+  "training_seconds": 45.57879349999712,
+  "best_epoch_zero_based": 73,
+  "best_validation_loss": 1.012574837757991,
+  "peak_allocated_gpu_bytes": 982087680
+}

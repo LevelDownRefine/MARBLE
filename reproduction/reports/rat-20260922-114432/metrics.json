@@ -1,0 +1,130 @@
+{
+  "scope": "Fig. 5c-d; Achilles author checkpoint re-evaluation",
+  "representation_training_performed": false,
+  "animal": "achilles",
+  "seed": 0,
+  "shapes": {
+    "neural": [
+      10000,
+      120
+    ],
+    "labels": [
+      10000,
+      3
+    ],
+    "train_neural": [
+      8000,
+      120
+    ],
+    "test_neural": [
+      2000,
+      120
+    ],
+    "train_anchor": [
+      7999,
+      20
+    ],
+    "test_anchor": [
+      1999,
+      20
+    ]
+  },
+  "data_summary": {
+    "position_range_m": [
+      4.303925015847199e-05,
+      1.600000023841858
+    ],
+    "spike_bin_max": 5.0,
+    "bins_with_multiple_spikes": 8971
+  },
+  "pca_solver": "randomized",
+  "author_model_parameters": {
+    "epochs": 100,
+    "order": 1,
+    "lr": 1,
+    "batch_size": 64,
+    "hidden_channels": [
+      64
+    ],
+    "out_channels": 32,
+    "inner_product_features": false,
+    "emb_norm": true,
+    "diffusion": false,
+    "include_positions": true,
+    "momentum": 0.9,
+    "frac_sampled_nb": -1,
+    "include_self": true,
+    "dropout": 0.0,
+    "vec_norm": false,
+    "bias": true,
+    "batch_norm": "batch_norm",
+    "seed": 0,
+    "dim_signal": 20,
+    "dim_emb": 20,
+    "n_sampled_nb": -1
+  },
+  "decoder": {
+    "type": "KNNDecoder",
+    "neighbors": 36,
+    "metric": "cosine"
+  },
+  "results_common_window": {
+    "CEBRA-time": {
+      "samples": 1999,
+      "mean_absolute_error_m": 0.17601434886455536,
+      "median_absolute_error_m": 0.11263281106948853,
+      "std_absolute_error_m": 0.18918226659297943,
+      "position_r2": 0.7600602115871398
+    },
+    "CEBRA-behaviour": {
+      "samples": 1999,
+      "mean_absolute_error_m": 0.1220134049654007,
+      "median_absolute_error_m": 0.0651635080575943,
+      "std_absolute_error_m": 0.17355915904045105,
+      "position_r2": 0.8382683263069737
+    },
+    "MARBLE-notebook": {
+      "samples": 1999,
+      "mean_absolute_error_m": 0.08568498492240906,
+      "median_absolute_error_m": 0.04662966728210449,
+      "std_absolute_error_m": 0.1601799577474594,
+      "position_r2": 0.8814313629272663
+    },
+    "MARBLE-eval": {
+      "samples": 1999,
+      "mean_absolute_error_m": 0.090542271733284,
+      "median_absolute_error_m": 0.052742354571819305,
+      "std_absolute_error_m": 0.16013063490390778,
+      "position_r2": 0.8784113295607532
+    }
+  },
+  "cebra_native_2000_sample_window": {
+    "CEBRA-time": {
+      "samples": 2000,
+      "mean_absolute_error_m": 0.17604580521583557,
+      "median_absolute_error_m": 0.11266392469406128,
+      "std_absolute_error_m": 0.189140185713768,
+      "position_r2": 0.7603067053198979
+    },
+    "CEBRA-behaviour": {
+      "samples": 2000,
+      "mean_absolute_error_m": 0.12198015302419662,
+      "median_absolute_error_m": 0.06508851796388626,
+      "std_absolute_error_m": 0.17352211475372314,
+      "position_r2": 0.8384980113364098
+    }
+  },
+  "limitations": [
+    "Author checkpoints were not retrained; training history is inherited.",
+    "Time-ordered 80/20 decoder split; one animal, not independent subjects.",
+    "Test graph uses the entire test window; this is offline decoding.",
+    "Author preprocessing treats each 25-ms bin as 1 ms; counts are binarized.",
+    "PCA=20 follows the notebook/checkpoint; Methods describes PCA=5.",
+    "MARBLE-notebook retains train mode (batch normalization on test data).",
+    "MARBLE-eval explicitly uses frozen batch normalization.",
+    "Only one unused Laplacian eigenpair is computed because diffusion=False.",
+    "All main metrics use the same 1999 test time points after differencing.",
+    "No significance claim: temporal errors are correlated."
+  ],
+  "runtime_seconds": 18.348193700000593
+}

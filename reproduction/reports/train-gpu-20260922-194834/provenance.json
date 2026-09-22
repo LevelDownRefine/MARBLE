@@ -1,0 +1,71 @@
+{
+  "started_utc": "2026-09-22T11:48:44.390347+00:00",
+  "python": "3.12.10 | packaged by conda-forge | (main, Apr 10 2025, 22:08:16) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "device": "cpu",
+  "git_commit": "09491ec077bf153b7dece8518cc65ddaa20eb26d",
+  "packages": {
+    "torch": "2.5.1+cpu",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.3.2",
+    "cebra": "0.4.0",
+    "elephant": "1.1.1",
+    "neo": "0.13.3",
+    "torch-geometric": "2.1.0.post1",
+    "torch-sparse": "0.6.18+pt25cpu",
+    "torch-scatter": "2.1.2+pt25cpu",
+    "MARBLE": "1.0"
+  },
+  "files_sha256": {
+    "MARBLE\\dataloader.py": "130fb942c214c696abf96271e0a0bab19d79e92c9ee38c6c5a1419ba37ce628a",
+    "MARBLE\\dynamics.py": "bad1c6acb90f1d1599c2eae4cc9963a6d01d0924163a91e35ad0a857a9c3d552",
+    "MARBLE\\geometry.py": "d4a463814a8e10ed2b106118112b18959197d79d22a2162ddda99c03e2868d6c",
+    "MARBLE\\layers.py": "8d4b98f9ca29e5422cb29615fa1f86767e86060120aced58434b7ed8ada12548",
+    "MARBLE\\main.py": "ce71f1e01079f47bf05eb918c6b4b66a56d8f392bd4cc0cc74295d96087466ef",
+    "MARBLE\\plotting.py": "69777b8c2ebfa7b2ea88d012a8ef96a1ec9a028f5033a0dd0e4bd481ead99965",
+    "MARBLE\\postprocessing.py": "2994a363bcc3a61d2439483a23630feece9c93c01453655af592ecf312f8ec5c",
+    "MARBLE\\preprocessing.py": "133d80de66953bd5a04bdae8db32cfa3c55d90444bc264706e8473c55cefff81",
+    "MARBLE\\smoothing.py": "6713f6bc7d4083a01db150619f6ac3033e55f541362a5e8228caf8e25f29983b",
+    "MARBLE\\utils.py": "8e790a8ba3e0601324903682298964e342baef21bfc4ecf30c3903a8c321349d",
+    "MARBLE\\__init__.py": "4491928ef2e8631f978e8c28fa92b3363dd5b711da4b17dc54f4dfb0146f4d85",
+    "MARBLE\\lib\\cknn.py": "9bf7340883be807f34d3802e2f896a866a09fff1f9e6c4802517a9d96bca3b72",
+    "MARBLE\\lib\\__init__.py": "99c71fa7c3b7bbaf366ce9a579d230cd3b6ed95344907338688809cdd079c796",
+    "reproduction\\src\\modern_gpu.py": "3a0858c41ee56363ebcb5889dde0e5c88e28886076189ba34ffcb49fdbaccfbe",
+    "reproduction\\src\\prepare_gpu_training.py": "34bc26d782bf2d489c52469dd95293bcfaefd6a1626f96db57177199d2809736",
+    "reproduction\\src\\rat_decoding.py": "bb06b7886bd5409024005de997c1dac71b731f1c06221861596ce4eff5ac9dc2",
+    "reproduction\\src\\repro_io.py": "ab5871e38fdd26cbf0cae47389f891bb73466dd47f4b651c02257f8761a0f63e",
+    "reproduction\\src\\train_rat.py": "0b6bd52cb054a1298d98ae3abbe1c0ba0f9dbd86c626998741758151059775f4",
+    "reproduction\\uv.lock": "b6579dbadc83ce86b45f758907799516afaed81df0162ca63618474cc968e08b",
+    "reproduction\\pyproject.toml": "351d60e0d338daf30722ddd4fb830e560d238383e6cf874d85ad7d35dde3c181",
+    "reproduction\\data_manifest.json": "6924a3fff8ec30d85a8c53d14902393920c835a18670b959a8e0986885d5f3fc",
+    "examples\\rat_hippocampus\\rat_utils.py": "21c4a98d985f307386758d451a89cad60262c06597d1783f24f587ceea5b0495",
+    "examples\\rat_hippocampus\\decoding.ipynb": "4d299e836645634191695e86e37f210b5d09bfad2d94eabbc47d77788e44f25c",
+    "reproduction\\gpu\\pyproject.toml": "fd9975e67f86136657857e556740c2ecf52020fb3209344473f9dec791c4349b",
+    "reproduction\\gpu\\uv.lock": "b7fc877ab8474d45526b6e3fd8d7243ace0ff9aaf6d5a7d692e8d4d7200fd231"
+  },
+  "author_files": {
+    "rat_data.pkl": {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/7609512",
+      "bytes": 22055089,
+      "sha256": "29dffd951853a98615827e7b8f3507907f9e0f0ef67e875410778ab4aadd42ab"
+    },
+    "marble_achilles_32D.pth": {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/7659512",
+      "bytes": 251915,
+      "sha256": "960e62bcbc275da79987331833ae5f1a5c4126b6d9c6b1e9e4e305406438a1ba"
+    },
+    "cebra_time_achilles_32D.pt": {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/7609517",
+      "bytes": 584362,
+      "sha256": "45f35449f39c4b31ccf77fba60cfb06eae0dc4c4e87edd0427b6bf5786d212d0"
+    },
+    "cebra_behaviour_achilles_32D.pt": {
+      "url": "https://dataverse.harvard.edu/api/access/datafile/7609520",
+      "bytes": 584490,
+      "sha256": "8945ed9919a6d694adddc560d14143d44b86381a5f1aaf002cb7b0c27b51e879"
+    }
+  },
+  "stage": "original CPU preprocessing, initialization and sampling",
+  "publication_note": "Local executable, source and command paths omitted; numeric results and recorded hashes unchanged."
+}

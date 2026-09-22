@@ -1,0 +1,56 @@
+[project]
+name = "marble-reproduction-gpu"
+version = "0.1.0"
+description = "Reproducible MARBLE paper experiments and numerical result audits"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy==1.26.4",
+    "scipy==1.13.1",
+    "torch==2.14.0+cu130",
+    "torch-geometric==2.8.0.post1",
+    "matplotlib==3.8.4",
+    "pandas==2.2.3",
+    "networkx==3.4.2",
+    "scikit-learn==1.3.2",
+    "seaborn==0.13.2",
+    "umap-learn==0.5.7",
+    "numba==0.61.2",
+    "POT==0.9.5",
+    "tensorboardX==2.6.2.2",
+    "pyyaml==6.0.2",
+    "mat73==0.65",
+    "wget==3.2",
+    "pympl==1.2.1",
+    "Cython==0.29.37",
+    "setuptools>=77.0.3",
+    "wheel==0.45.1",
+    "pytest==8.3.5",
+    "ruff==0.11.2",
+    "cebra==0.4.0",
+    "elephant==1.1.1",
+    "neo==0.13.3",
+    "quantities==0.15.0",
+    "statannotations==0.7.1",
+    "markdown==3.7",
+]
+
+[tool.uv]
+build-constraint-dependencies = ["setuptools==75.8.0"]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+
+[tool.ruff]
+line-length = 88
+extend-exclude = ["upstream", ".uv-cache", ".python", "results"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["MARBLE", "rat_decoding", "repro_io", "train_rat"]
